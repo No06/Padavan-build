@@ -47,6 +47,8 @@ jobs:
         TNAME: MI-3
         KERNEL: 3.4
       run: |
+        curl --create-dirs -L https://go.dev/dl/go1.15.2.linux-amd64.tar.gz -o /opt/rt-n56u/trunk/tools/go/go1.15.2.linux-amd64.tar.gz
+      
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
